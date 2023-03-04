@@ -1,0 +1,4 @@
+#Sat Mar 04 20:50:36 IST 2023
+base.0=D\:\\NV-tech\\NV-tech_web-page\\staticpage\\build\\app\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

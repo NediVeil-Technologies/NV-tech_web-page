@@ -1,0 +1,77 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run
+
+## exception
+
+ArgumentError: Invalid argument(s): Uri org-dartlang-app:/web_plugin_registrant.dart must have scheme 'file:'.
+
+```
+#0      WindowsStyle.pathFromUri (package:path/src/style/windows.dart:86:7)
+#1      Context.fromUri (package:path/src/context.dart:1000:32)
+#2      FileSystem.getPath (package:file/src/interface/file_system.dart:158:24)
+#3      LocalFileSystem.file (package:file/src/backends/local/local_file_system.dart:26:54)
+#4      ErrorHandlingFileSystem.file (package:flutter_tools/src/base/error_handling_io.dart:123:24)
+#5      ProjectFileInvalidator.findInvalidated (package:flutter_tools/src/run_hot.dart:1486:25)
+#6      ResidentWebRunner._updateDevFS (package:flutter_tools/src/isolated/resident_web_runner.dart:477:80)
+#7      ResidentWebRunner.restart (package:flutter_tools/src/isolated/resident_web_runner.dart:355:43)
+<asynchronous suspension>
+#8      TerminalHandler._commonTerminalInputHandler (package:flutter_tools/src/resident_runner.dart:1707:40)
+<asynchronous suspension>
+#9      TerminalHandler.processTerminalInput (package:flutter_tools/src/resident_runner.dart:1760:7)
+<asynchronous suspension>
+```
+
+## flutter doctor
+
+```
+[32m[✓][39m Flutter (Channel stable, 3.7.6, on Microsoft Windows [Version 10.0.19041.1], locale en-IN)
+    [32m•[39m Flutter version 3.7.6 on channel stable at C:\src\flutter
+    [32m•[39m Upstream repository https://github.com/flutter/flutter.git
+    [32m•[39m Framework revision 12cb4eb7a0 (3 days ago), 2023-03-01 10:29:26 -0800
+    [32m•[39m Engine revision ada363ee93
+    [32m•[39m Dart version 2.19.3
+    [32m•[39m DevTools version 2.20.1
+
+[32m[✓][39m Windows Version (Installed version of Windows is version 10 or higher)
+
+[32m[✓][39m Android toolchain - develop for Android devices (Android SDK version 33.0.1)
+    [32m•[39m Android SDK at C:\Users\admin\app data
+    [32m•[39m Platform android-33, build-tools 33.0.1
+    [32m•[39m Java binary at: C:\Program Files\Android\Android Studio\jre\bin\java
+    [32m•[39m Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+    [32m•[39m All Android licenses accepted.
+
+[32m[✓][39m Chrome - develop for the web
+    [32m•[39m Chrome at C:\Program Files (x86)\Google\Chrome\Application\chrome.exe
+
+[31m[✗][39m Visual Studio - develop for Windows
+    [31m✗[39m Visual Studio not installed; this is necessary for Windows development.
+      Download at https://visualstudio.microsoft.com/downloads/.
+      Please install the "Desktop development with C++" workload, including all of its default components
+
+[32m[✓][39m Android Studio (version 2021.3)
+    [32m•[39m Android Studio at C:\Program Files\Android\Android Studio
+    [32m•[39m Flutter plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/9212-flutter
+    [32m•[39m Dart plugin can be installed from:
+      🔨 https://plugins.jetbrains.com/plugin/6351-dart
+    [32m•[39m Java version OpenJDK Runtime Environment (build 11.0.13+0-b1751.21-8125866)
+
+[32m[✓][39m VS Code (version 1.76.0)
+    [32m•[39m VS Code at C:\Users\admin\AppData\Local\Programs\Microsoft VS Code
+    [32m•[39m Flutter extension version 3.60.0
+
+[32m[✓][39m Connected device (3 available)
+    [32m•[39m Windows (desktop) • windows • windows-x64    • Microsoft Windows [Version 10.0.19041.1]
+    [32m•[39m Chrome (web)      • chrome  • web-javascript • Google Chrome 110.0.5481.178
+    [32m•[39m Edge (web)        • edge    • web-javascript • Microsoft Edge 110.0.1587.63
+
+[32m[✓][39m HTTP Host Availability
+    [32m•[39m All required HTTP hosts are available
+
+[33m![39m Doctor found issues in 1 category.
+```
