@@ -100,9 +100,20 @@ What Our Clients Say
     Colors.amber.shade100,
     Colors.yellow.shade600,
   ];
-  final _controller = ScrollController();
+  final ScrollController _controller = ScrollController();
+  var index;
+  void changePosition(index, height) {
+    //_controller.jumpTo(index);
+    _controller.animateTo(
+      index * height,
+      duration: const Duration(seconds: 2),
+      curve: Curves.fastOutSlowIn,
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
+    final height = MediaQuery.of(context).size.height;
     return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.green.shade300,
@@ -115,19 +126,48 @@ What Our Clients Say
               if (MediaQuery.of(context).size.width > 600)
                 Row(
                   children: [
-                    Text('Home'),
+                    TextButton(
+                      child: Text('Home'),
+                      onPressed: () {
+                        changePosition(0, height);
+                      },
+                    ),
                     SizedBox(
                       width: 15,
                     ),
-                    Text('About'),
+                    TextButton(
+                      child: Text('About'),
+                      onPressed: () {
+                        changePosition(1, height);
+                      },
+                    ),
                     SizedBox(
                       width: 15,
                     ),
-                    Text('Services'),
+                    TextButton(
+                      child: Text('Services'),
+                      onPressed: () {
+                        changePosition(2, height);
+                      },
+                    ),
                     SizedBox(
                       width: 15,
                     ),
-                    Text('Contact Us'),
+                    TextButton(
+                      child: Text('Contact Us'),
+                      onPressed: () {
+                        changePosition(3, height);
+                      },
+                    ),
+                    SizedBox(
+                      width: 25,
+                    ),
+                    TextButton(
+                      child: Text('Testimonials'),
+                      onPressed: () {
+                        changePosition(4, height);
+                      },
+                    ),
                     SizedBox(
                       width: 25,
                     ),
@@ -139,50 +179,91 @@ What Our Clients Say
         body: SizedBox(
           height: MediaQuery.of(context).size.height,
           child: MediaQuery.of(context).size.width > 600
-              ? listView(titles, colours, coloursLight, content)
-              : listViewMV(titles, colours, coloursLight, content),
+              ? listView(titles, colours, coloursLight, content, _controller)
+              : listViewMV(titles, colours, coloursLight, content, _controller),
         ),
         drawer: MediaQuery.of(context).size.width < 600
             ? Drawer(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    ElevatedButton(
-                      child: Column(
-                        children: [
-                          Center(
-                            child: Text(
-                              'Home',
-                              style: TextStyle(
-                                fontSize: 30,
-                              ),
+                width: MediaQuery.of(context).size.width * .6,
+                child: Container(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ElevatedButton(
+                        child: Center(
+                          child: Text(
+                            'Home',
+                            style: TextStyle(
+                              fontSize: 30,
                             ),
                           ),
-                        ],
+                        ),
+                        onPressed: () {
+                          changePosition(0, height);
+                          Navigator.pop(context);
+                        },
                       ),
-                      onPressed: null,
-                    ),
-                    ElevatedButton(
-                      child: Text('About'),
-                      onPressed: null,
-                    ),
-                    ElevatedButton(
-                      child: Text('Services'),
-                      onPressed: null,
-                    ),
-                    ElevatedButton(
-                      child: Text('Contact Us'),
-                      onPressed: null,
-                    ),
-                  ],
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                        child: Center(
+                          child: Text('About'),
+                        ),
+                        onPressed: () {
+                          changePosition(1, height);
+                          Navigator.pop(context);
+                        },
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                        child: Center(
+                          child: Text('Services'),
+                        ),
+                        onPressed: () {
+                          changePosition(2, height);
+                          Navigator.pop(context);
+                        },
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                        child: Center(
+                          child: Text('Contact Us'),
+                        ),
+                        onPressed: () {
+                          changePosition(3, height);
+                          Navigator.pop(context);
+                        },
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      ElevatedButton(
+                        child: Center(
+                          child: Text('Testimonials'),
+                        ),
+                        onPressed: () {
+                          changePosition(4, height);
+                          Navigator.pop(context);
+                        },
+                      ),
+                    ],
+                  ),
+                  decoration: BoxDecoration(
+                      gradient: SweepGradient(colors: coloursLight)),
                 ),
               )
             : null);
   }
 }
 
-Widget listView(titles, colours, lightColour, content) {
+Widget listView(titles, colours, lightColour, content, controller) {
   return ListView.builder(
+    controller: controller,
     itemCount: titles.length,
     itemBuilder: (context, index) {
       return Container(
@@ -318,9 +399,10 @@ Widget listView(titles, colours, lightColour, content) {
   );
 }
 
-Widget listViewMV(titles, colours, lightColour, content) {
+Widget listViewMV(titles, colours, lightColour, content, controller) {
   return ListView.builder(
     itemCount: titles.length,
+    controller: controller,
     itemBuilder: (context, index) {
       return Container(
         decoration: BoxDecoration(
