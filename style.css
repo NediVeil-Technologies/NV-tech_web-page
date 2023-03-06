@@ -17,7 +17,7 @@ html {
   align-items: center;
   height: 100vh; /* высота всегда на весь экран */
   min-height: 600px;
-  background: url(https://github.com/julia-vp/julia-vp-5PricingLandingPage.github.io/blob/master/img/4hh8mjbqyye.jpg?raw=true) no-repeat center;
+  background: url("") no-repeat center;
   background-size: cover;
   position: relative;
 }
