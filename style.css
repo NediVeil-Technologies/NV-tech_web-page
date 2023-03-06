@@ -37,6 +37,7 @@ html {
   align-items: center;
 }
 .logo-img {
+
   width: 250px;
 }
 .logo-name {
@@ -324,6 +325,7 @@ html {
   margin: 1rem auto;
 }
 .legal {
+  color: #fff;
   background-color: #000;
   padding-right: 5%;
   padding-left: 5%;
