@@ -282,6 +282,7 @@ html {
   cursor: pointer;
 }
 .footer-wrap {
+  background-color: #000;
   display: flex;
   justify-content: center;
 }
@@ -323,6 +324,7 @@ html {
   margin: 1rem auto;
 }
 .legal {
+  background-color: #000;
   padding-right: 5%;
   padding-left: 5%;
   display: flex;
