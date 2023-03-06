@@ -55,7 +55,7 @@ html {
   z-index: 2;
 }
 .menu {
-  width: 65%;
+  width: 50%;
 }
 .menu ul {
   display: flex;
@@ -65,7 +65,7 @@ html {
 .menu-link {
   text-decoration: none;
   color: #fff;
-  font-size: 1.6em;
+  font-size: 2em;
 }
 .get-started {
   margin-left: 6rem;
