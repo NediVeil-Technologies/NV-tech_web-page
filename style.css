@@ -29,8 +29,8 @@ html {
   height: 100%;
   opacity: 0.8;
   z-index: 0;
-  background-image: -moz-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
-  background-image: -webkit-linear-gradient( 150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+  background-image: -moz-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(222, 30, 203) 100%);
+  background-image: -webkit-linear-gradient( 150deg, rgb(65,88,208) 0%,rgb(200, 80, 192) 50% ,rgb(255, 204, 112)100%);
 }
 .logo {
   display: flex;
@@ -47,7 +47,7 @@ html {
 }
 .header {
   display: flex;
-  height: 10vh;
+  height: 15vh;
   justify-content: space-between;
   align-items: center;
   width: 90%;
@@ -55,7 +55,7 @@ html {
   z-index: 2;
 }
 .menu {
-  width: 50%;
+  width: 40%;
 }
 .menu ul {
   display: flex;
@@ -76,7 +76,7 @@ html {
 }
 .main-text {
   display: flex;
-  font-size: 1.5em;
+  font-size: 3em;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -295,7 +295,7 @@ html {
   justify-content: space-between;
 }
 .footer-menu {
-  width: 60%;
+  width: 30%;
 }
 .footer-menu ul {
   display: flex;
@@ -335,7 +335,7 @@ html {
   align-items: center;
 }
 .copy {
-  font-size: 16px;
+  font-size: 12px;
   
 }
 .social-links {
@@ -389,9 +389,11 @@ html {
 text-align: center;
 
 }
+
+
 @media (max-width: 1199px) {
   html {
-    font-size: 9px;
+    font-size: 10px;
   }
 }
 
@@ -437,5 +439,4 @@ text-align: center;
     padding: 1rem;
   }
 }
-
 
