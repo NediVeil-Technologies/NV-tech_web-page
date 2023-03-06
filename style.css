@@ -30,8 +30,21 @@ html {
   opacity: 0.8;
   z-index: 0;
   background-image: -moz-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(222, 30, 203) 100%);
-  background-image: -webkit-linear-gradient( 150deg, rgb(65,88,208) 0%,rgb(200, 80, 192) 50% ,rgb(255, 204, 112)100%);
+  background-image: -webkit-linear-gradient( 150deg, rgb(255, 204, 112) 0%,rgb(200, 80, 192) 50% ,rgb(65,88,208)100%);
 }
+.Aboutus-style{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 0;
+  background-image: -moz-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(222, 30, 203) 100%);
+  background-image: -webkit-linear-gradient( 150deg, rgb(0, 219, 222) 0%, rgb(252,0,255)100%);
+
+}
+
 .logo {
   display: flex;
   align-items: center;
@@ -243,14 +256,12 @@ html {
 .call-to-action {
   text-align: center;
   position: relative;
-  padding: 15rem;
-  background: url(/img/4299.jpg) no-repeat center;
-  background-size: cover;
+  padding: 20rem;
   color: #fff;
 
 }
-.call-to-action span, h4, button {
-  z-index: 2;
+.call-to-action span, h2, button {
+  z-index: 12;
   position: relative;
 }
 .call-to-action span {
@@ -258,7 +269,7 @@ html {
   text-transform: uppercase;
   font-weight: 500;
 }
-.call-to-action h4 {
+.call-to-action h2 {
   font-weight: 500;
   font-size: 5rem;
   margin: 1rem auto 2rem;
@@ -358,11 +369,11 @@ html {
   right: 0;
   top: 0;
   height: 100vh;
-  width: 100%;
+  width: 50vh;
   list-style: none;
-  font-size: 3rem;
+  font-size: 12px;
   line-height: 3;
-  background-color: #6e45e2;
+  background-color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -378,7 +389,7 @@ html {
   position: fixed;
   right: 10rem;
   top: 0;
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
   color: #fff;
 }
