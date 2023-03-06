@@ -1,0 +1,436 @@
+HTML CSSResult Skip Results Iframe
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Maven Pro', sans-serif;
+  margin: 0;
+}
+html {
+  font-size: 10px;
+}
+.main {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh; /* высота всегда на весь экран */
+  min-height: 600px;
+  background: url(https://github.com/julia-vp/julia-vp-5PricingLandingPage.github.io/blob/master/img/4hh8mjbqyye.jpg?raw=true) no-repeat center;
+  background-size: cover;
+  position: relative;
+}
+.main-overlay, .call-to-action-overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.8;
+  z-index: 0;
+  background-image: -moz-linear-gradient(150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+  background-image: -webkit-linear-gradient( 150deg, rgb(136,211,206) 0%, rgb(110,69,226) 100%);
+}
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  width: 100px;
+}
+.logo-name {
+  padding-left: 8px;
+  font-size: 2em;
+  letter-spacing: 0.1em;
+}
+.header {
+  display: flex;
+  height: 10vh;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  position: relative; 
+  z-index: 2;
+}
+.menu {
+  width: 65%;
+}
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.menu-link {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.6em;
+}
+.get-started {
+  margin-left: 6rem;
+  border: 1px solid #fff;
+  padding: 1.2rem 2rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+}
+.main-text {
+  display: flex;
+  font-size: 1.5em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+.main-text span {
+  display: inline-block;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1.8rem;
+}
+.main-text span::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+.main-text span::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #fff;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.main-text h1 {
+  font-size: 80px;
+  margin: 0.5rem;
+}
+.main-text p {
+  font-size: 1.6rem;
+}
+.main-arrow {
+  position: relative;
+  z-index: 2;
+  height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.arrow-down {
+  text-align: center;
+  line-height: 60px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  box-shadow: 0px 0px 18.7px 2.3px rgba(204, 204, 223, 0.5);
+}
+.table {
+  background-color: #f9fafc;
+  /* height: 100vh;
+  min-height: 600px; */
+  padding: 5rem;
+}
+.table-header {
+  text-align: center;
+  margin-bottom: 10rem;
+}
+.table-header span {
+  color: #9fa4af;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+.table-header span::after {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #6e45e2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;  
+}
+.table-header span::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background-color: #6e45e2;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.table-header h2 {
+  color: #4f4f6f;
+  font-size: 6rem;
+  margin: 0;
+}
+.table-header p {
+  font-size: 1.8rem;
+  display: inline-block; /*задаем отображение текста блоком */
+  width: 40rem; /* ширина блока */
+  line-height: 1.4;
+  color: #9fa4af;
+}
+.price-cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.price-card {
+  background-color: #fff;
+  border-radius: 2rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 30rem;
+  /* height: 390px; */
+  text-align: center;
+  transition: 0.4s;
+}
+.price-card:hover {
+  cursor: pointer;
+  box-shadow: 0px 0px 60px 10px rgba(204, 204, 223, 0.7);
+}
+.price-card img {
+  width: 10rem;
+}
+.price-card span {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin: 3rem auto 1rem;
+}
+.price-card h4 {
+  font-weight: 500;
+  margin: 1rem;
+  color: #4f4f6f;
+  font-size: 3.5rem;
+} 
+.price-card h4 sub {
+  font-size: 1.4rem;
+}
+.price-card h4 sup {
+  vertical-align: super;
+  font-size: 1.4rem;
+  margin-right: 0.3rem;
+}
+.price-card p {
+  color: #9fa4af;
+}
+.price-btn {
+  background-color: #fff;
+  border: 1px solid #9fa4af;
+  color: #9fa4af;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 1rem 4rem;
+  border-radius: 100px;
+  transition: 0.3s;
+}
+.price-btn:hover {
+  background-color: #6e45e2;
+  color: #fff;
+}
+.call-to-action {
+  text-align: center;
+  position: relative;
+  padding: 15rem;
+  background: url(/img/4299.jpg) no-repeat center;
+  background-size: cover;
+  color: #fff;
+
+}
+.call-to-action span, h4, button {
+  z-index: 2;
+  position: relative;
+}
+.call-to-action span {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.call-to-action h4 {
+  font-weight: 500;
+  font-size: 5rem;
+  margin: 1rem auto 2rem;
+}
+.cta-btn {
+  display: inline-block;
+  border: none;
+  background-color: #c2c9db;
+  width: 20rem;
+  height: 5rem;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 1rem;
+  border-radius: 100px;
+  transition: 0.2s;
+  color: inherit;
+  font-family: inherit;
+}
+.cta-btn:hover {
+  background-color: #6e45e2;
+  cursor: pointer;
+}
+.footer-wrap {
+  display: flex;
+  justify-content: center;
+}
+.footer {
+  height: 10vh;
+  width: 90%;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-menu {
+  width: 60%;
+}
+.footer-menu ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.footer-menu-link {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: #6a6a77;
+  font-weight: 500;
+}
+.footer-get-started {
+  margin-left: 6rem;
+  border: none;
+  background-color: #6e45e2;
+  padding: 1.2rem 2rem;
+  border-radius: 100px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.line {
+  display: block;
+  width: 90%;
+  height: 1px;
+  background-color: #333;
+  margin: 1rem auto;
+}
+.legal {
+  padding-right: 5%;
+  padding-left: 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.copy {
+  font-size: 1.4rem;
+  color: #6a6a77;
+}
+.social-links {
+  width: 10%;
+  display: flex;
+  justify-content: space-evenly;
+  color: #6a6a77;
+  font-size: 1.8rem;
+  margin-right: 2rem;
+}
+.m-menu-link {
+  display: none;
+  color: #fff;
+  font-size: 3rem;
+}
+.m-menu {
+  padding: 0;
+  margin: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  list-style: none;
+  font-size: 3rem;
+  line-height: 3;
+  background-color: #6e45e2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  transition: 0.2s;
+  transform: translateX(100%);
+}
+.m-menu__active {
+  transform: translateX(0%);
+}
+.close-menu {
+  position: fixed;
+  right: 10rem;
+  top: 0;
+  font-size: 5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.close-menu:hover {
+  cursor: pointer;
+}
+.fa{
+text-align: center;
+
+}
+@media (max-width: 1199px) {
+  html {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 991px) {
+  html {
+    font-size: 7px;
+  }
+  .visible-lg {
+    display: none;
+  }
+  .m-menu-link {
+    display: block;
+    position: absolute;
+    right: 5rem;
+  }
+  .get-started-btn {
+    margin: 0;
+  }
+  .price-cards {
+    flex-direction: column;
+  }
+  .price-card {
+    width: 80%;
+    margin: 2rem auto;
+  }
+  .footer {
+    justify-content: center;
+  }
+  .footer-menu {
+    display: none;
+  }
+  .legal {
+    flex-direction: column;
+  }
+  .social-links {
+    padding-top: 2rem;
+    text-align: left;
+    
+  }
+  .social-links a {
+    font-size: 3rem;
+    color: red;
+    padding: 1rem;
+  }
+}
+
+
