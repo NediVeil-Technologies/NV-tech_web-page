@@ -17,7 +17,7 @@
 <ul class="m-menu">
   <div class="close-menu">&times;</div>
   <li><a href="#" class="menu-link">Home</a></li>
-  <li><a href="#" class="menu-link">About Us</a></li>
+  <li><a href="#about" class="menu-link">About Us</a></li>
   <li><a href="#" class="menu-link">Services</a></li>
   <li><a href="#" class="menu-link">Contact Us</a></li>
 
@@ -40,7 +40,7 @@
         <div class="menu visible-lg">
           <ul>
             <li><a href="#" class="menu-link">Home</a></li>
-            <li><a href="#" class="menu-link">About Us</a></li>
+            <li><a href="#about" class="menu-link">About Us</a></li>
             <li><a href="#" class="menu-link">Services</a></li>
             <li><a href="#" class="menu-link">Contact Us</a></li>
             <!-- <li><a href="#" class="menu-link get-started">Get started</a></li> -->
@@ -48,25 +48,25 @@
         </div>
       </div>
       <div class="main-text">
-        <span>A Startup Company</span>
+        <span>Welcome to</span>
         <h2>NediVeil Technologies</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam, atque!</p>
       </div>
-    <a href="#" class="main-arrow">
+   <!---- <a href="#" class="main-arrow">
       <div class="arrow-down"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRw%0D%0AOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhl%0D%0AaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDE2IDE2Ij48ZyA+PHBvbHlnb24gZmlsbD0iIzQ0NDQ0%0D%0ANCIgcG9pbnRzPSIxNC43LDkuMyAxMy4zLDcuOSA5LDEyLjIgOSwwIDcsMCA3LDEyLjIgMi43LDcu%0D%0AOSAxLjMsOS4zIDgsMTYgIi8+PC9nPjwvc3ZnPg==" alt="down"></div>
-    </a>
+    </a> -->
   </div>
   <br>
   <div class="call-to-action">
     <div class="Aboutus-style"></div>
-    <h2>About Us</h2>
-    
+    <h2 id="about">About Us</h2>
+    <h3>gdsugsugfewygfuewgfugewugfgf</h3>
   </div>
   <div class="table">
     <div class="table-header">
       <span>Hi buddy</span>
-      <h2>Services</h2>
-      <p>What we do for clients</p>
+      <h2> Our Services</h2>
+      <b><i><p>What we do for clients</p></i></b>
     </div>
     <div class="price-cards">
       <div class="price-card">
@@ -74,21 +74,21 @@
         <span>Web Development</span>
         <!--<h4><sup>$</sup>0<sub>/month</sub></h4> -->
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae vitae libero, quidem dolor provident exercitationem soluta eaque nostrum eius quibusdam fugit inventore facere nesciunt, iste non amet cumque nulla!</p>
-        <button class="price-btn">Select a plan</button>
+        <!--<button class="price-btn">Select a plan</button>-->
       </div>
       <div class="price-card">
         <img src="https://github.com/julia-vp/julia-vp-5PricingLandingPage.github.io/blob/master/img/Asset%202@4x.png?raw=true" alt="">
         <span>personal</span>
         <h4><sup>$</sup>29<sub>/month</sub></h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae vitae libero, quidem dolor provident exercitationem soluta eaque nostrum eius quibusdam fugit inventore facere nesciunt, iste non amet cumque nulla!</p>
-        <button class="price-btn">Select a plan</button>
+           <!--<button class="price-btn">Select a plan</button>-->
       </div>
       <div class="price-card">
         <img src="https://github.com/julia-vp/julia-vp-5PricingLandingPage.github.io/blob/master/img/Asset%201@4x.png?raw=true" alt="">
         <span>personal</span>
         <h4><sup>$</sup>49<sub>/month</sub></h4>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores beatae vitae libero, quidem dolor provident exercitationem soluta eaque nostrum eius quibusdam fugit inventore facere nesciunt, iste non amet cumque nulla!</p>
-        <button class="price-btn">Select a plan</button>
+          <!--<button class="price-btn">Select a plan</button>-->
       </div>
     </div>
   </div>
@@ -110,7 +110,7 @@
       <div class="footer-menu">
         <ul>
           <li><a href="#" class="footer-menu-link">Home</a></li>
-          <li><a href="#" class="footer-menu-link">About Us</a></li>
+          <li><a href="#about" class="footer-menu-link">About Us</a></li>
           <li><a href="#" class="footer-menu-link">Services</a></li>
           <li><a href="#" class="footer-menu-link">Contact Us</a></li>
         </ul>
@@ -131,6 +131,9 @@
     </div>
   </div>
 
+  <!-- Return to Top -->
+<a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script>
     $(function() {
@@ -146,6 +149,22 @@
         menu.toggleClass('m-menu__active');
       });
     });
+  </script>
+
+  <script>
+    // ===== Scroll to Top ==== 
+$(window).scroll(function() {
+    if ($(this).scrollTop() >= 50) {        // If page is scrolled more than 50px
+        $('#return-to-top').fadeIn(200);    // Fade in the arrow
+    } else {
+        $('#return-to-top').fadeOut(200);   // Else fade out the arrow
+    }
+});
+$('#return-to-top').click(function() {      // When arrow is clicked
+    $('body,html').animate({
+        scrollTop : 0                       // Scroll to top of body
+    }, 500);
+});
   </script>
 
 </body>
